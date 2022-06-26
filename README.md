@@ -71,10 +71,10 @@ class PostController extends Controller
 }
 ```
 
-For simple query it would be fine, but when you have a bunch of filters it would be a mess and none of them are reusable.
+For simple queries, it would be fine, but when you have a bunch of filters, you can not control them and none of them are reusable.
 
 
-With this package you need to only pass `filterable()` scope method to you model before returning the records, check below example:
+With this package you need to only pass `filterable()` scope method to your model before returning the records, check below example:
 ```php
 <?php
 
@@ -119,7 +119,7 @@ php artisan vendor:publish --tag="laravel-filterable-config"
 
 ## Usage
 
-To add the magic you should add only `hasFilterableTrait` to you model.
+To add the magic you should add only `hasFilterableTrait` to your model.
 
 ```php
 <?php
@@ -138,13 +138,13 @@ class Post extends Model
 
 ```
 
-Then you should create a FilterableClass and some Query Filters to define your rules. 
+Then you need to create a FilterableClass and some Query Filters to define your rules. 
 
 <br>
 
 To remove the pain of creating the classes, already I added some commands.
 
-- For creating a Filterable class, you should run this command:
+- For creating a Filterable class, you need to run this command:
 ```bash
 php artisan make:filterable PostsFilterable
 ```
@@ -208,14 +208,14 @@ class PublishedQueryFilter extends QueryFilterAbstract implements QueryFilterInt
     }
 }
 ```
- You would do the logic for each column separately. Let's implement the logic here
+ You will do the logic for each column inside each Query Filter separately. Let's implement the logic here
 ```php
 public function handle(Builder $builder, $value): Builder
 {
     return $builder->where('published', $value);
 }
 ```
-The returned value is string, and it does not return any data. So we should map the value.
+The returned value is a string, and it does not return any data. So we should map the value.
 
 There is a property `$mapValues` inside the class. 
 ```php
@@ -224,7 +224,7 @@ protected array $mapValues = [
     'false' => false,
 ];
 ```
-And finally we should resolve the mapped value through `resolveValue()` method.
+And finally, we should resolve the mapped value through `resolveValue()` method.
 ```php
 protected array $mapValues = [
     'true' => true,
@@ -252,10 +252,9 @@ public array $filters = [
 ```
 
 
-
 <br>
 
-- When we create a Query Filter directly you can pass filterable class as parameter to auto insert into`$filters` property.
+- When we create a Query Filter directly you can pass the Filterable class as a parameter to auto-insert into`$filters` property.
 
 ```bash
 php artisan make:query-filter PublishedQueryFilter --filterable=PostsFilterable
@@ -289,7 +288,7 @@ class PostsFilterable extends FilterableAbstract implements FilterableInterface
 The final step is enabling `PostsFilterable` to your model. 
 
 There are 2 ways to enable it:
-1. Globally, through returning the class path to `filterableClass()` method in the model
+1. Globally for the model, through returning the class path to `filterableClass()` method.
 ```php
 <?php
 
@@ -318,13 +317,13 @@ class Post extends Model
 ```
 <br>
 
-2. Locally, through passing as a parameter to `fliterable()` scope. The scope accepts 3 parameters
+2. Locally, through passing as a parameter to `fliterable()` scope of your model. The scope accepts 3 parameters
 ```php
 public function scopeFilterable(Builder $builder, $request = null, $filterableClass = null, $filters = []): Builder
 ```
 <br>
 
-If you pass Filterable class as 1st parameter, under the hood the package will handle it for you. Let's check the code below.
+If you pass Filterable class as 1st parameter, under the hood the package will handle it for you and ignore the `request`. Let's check the code below.
 ```php
 <?php
 
@@ -344,7 +343,7 @@ class PostController extends Controller
 }
 
 ```
-Also, you can pass additional Query filters through `$filters` parameter, for example:
+Also, you can pass some additional Query Filters through `$filters` parameter, for example:
 ```php
 <?php
 
