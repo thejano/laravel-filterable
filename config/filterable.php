@@ -1,6 +1,5 @@
 <?php
 
-// config for TheJano/LaravelFilterable
 return [
 
     /*

@@ -3,22 +3,38 @@
 namespace TheJano\LaravelFilterable\Traits;
 
 use Illuminate\Contracts\Database\Query\Builder;
+use TheJano\LaravelFilterable\Interfaces\FilterableInterface;
 
 trait HasFilterableTrait
 {
     use QueryFiltersTrait;
 
-    public function scopeFilterable(Builder $builder, $model = null, $filters = [])
+    public function scopeFilterable(Builder $builder, $request = null, $filterableClass = null, $filters = []): Builder
     {
-        if ($model == null && $this->filterableClass() != null) {
-            $model = $this->filterableClass();
+        if (is_array($filterableClass)) {
+            $filters = $filterableClass;
         }
 
-        return (new $model())->add($filters)->filter($builder);
+
+        if (! is_null($request) && ((new $request()) instanceof FilterableInterface)) {
+            $filterableClass = $request;
+            $request = request();
+        }
+
+        if ($filterableClass == null && $this->modelFilterableClass() != null) {
+            $filterableClass = $this->modelFilterableClass();
+        }
+
+        return (new $filterableClass($request))->add($filters)->filter($builder);
     }
 
     public function filterableClass()
     {
         return null;
+    }
+
+    protected function modelFilterableClass()
+    {
+        return $this->filterableClass();
     }
 }
