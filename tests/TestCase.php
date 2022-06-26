@@ -2,7 +2,6 @@
 
 namespace TheJano\LaravelFilterable\Tests;
 
-use Illuminate\Database\Eloquent\Factories\Factory;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 use TheJano\LaravelFilterable\LaravelFilterableServiceProvider;
@@ -15,7 +14,6 @@ class TestCase extends Orchestra
         parent::setUp();
 
         $this->migrate();
-        
     }
 
     protected function getPackageProviders($app)

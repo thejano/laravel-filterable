@@ -5,7 +5,6 @@ use TheJano\LaravelFilterable\Tests\Filters\Filterable\PostFilterable;
 use TheJano\LaravelFilterable\Tests\Filters\QueryFilter\HasCommentsQueryFilter;
 use TheJano\LaravelFilterable\Tests\Models\Post;
 
-
 it('Pass filterable to the model', function () {
     $request = new Request([
         'published' => 'true',
