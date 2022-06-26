@@ -8,6 +8,6 @@
 
 The initial release of the package
 
-## [v1.0.0] - 2022-06-27
+## [v1.0.0] - 2022-06-26
 
 - Intial Release
