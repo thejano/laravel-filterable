@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filters\Traits;
+namespace TheJano\LaravelFilterable\Traits;
 
 use Illuminate\Contracts\Database\Query\Builder;
 

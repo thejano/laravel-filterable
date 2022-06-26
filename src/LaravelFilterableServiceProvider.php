@@ -2,11 +2,10 @@
 
 namespace TheJano\LaravelFilterable;
 
-use App\Console\Commands\MakeFilterable;
-use App\Console\Commands\MakeQueryFilter;
 use Spatie\LaravelPackageTools\Package;
 use Spatie\LaravelPackageTools\PackageServiceProvider;
-use TheJano\LaravelFilterable\Commands\LaravelFilterableCommand;
+use TheJano\LaravelFilterable\Commands\MakeFilterable;
+use TheJano\LaravelFilterable\Commands\MakeQueryFilter;
 
 class LaravelFilterableServiceProvider extends PackageServiceProvider
 {

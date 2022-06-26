@@ -2,9 +2,9 @@
 
 namespace {{ namespace }};
 
-use App\Filters\Abstracts\QueryFilterAbstract;
-use App\Filters\Interfaces\QueryFilterInterface;
+use TheJano\LaravelFilterable\Abstracts\QueryFilterAbstract;
 use Illuminate\Database\Eloquent\Builder;
+use TheJano\LaravelFilterable\Interfaces\QueryFilterInterface;
 
 class {{ class }} extends QueryFilterAbstract implements QueryFilterInterface
 {
@@ -14,7 +14,7 @@ class {{ class }} extends QueryFilterAbstract implements QueryFilterInterface
      *
      * @var Array
     */
-    protected $mapValues = [];
+    protected array $mapValues = [];
 
     /**
      * Handle The Query Filter

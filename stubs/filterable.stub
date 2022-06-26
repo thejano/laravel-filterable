@@ -2,8 +2,8 @@
 
 namespace {{ namespace }};
 
-use App\Filters\Abstracts\FilterableAbstract;
-use App\Filters\Interfaces\FilterableInterface;
+use TheJano\LaravelFilterable\Abstracts\FilterableAbstract;
+use TheJano\LaravelFilterable\Interfaces\FilterableInterface;
 
 class {{ class }} extends FilterableAbstract implements FilterableInterface
 {
@@ -12,6 +12,6 @@ class {{ class }} extends FilterableAbstract implements FilterableInterface
      *
      * @var Array
      */
-    protected $filters = [];
+    protected array $filters = [];
 }
 

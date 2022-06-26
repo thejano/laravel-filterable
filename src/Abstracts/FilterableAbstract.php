@@ -1,20 +1,20 @@
 <?php
 
-namespace App\Filters\Abstracts;
+namespace TheJano\LaravelFilterable\Abstracts;
 
 use Illuminate\Database\Eloquent\Builder;
 
 abstract class FilterableAbstract
 {
-    public $request;
-    protected $filters = [];
+    private mixed $request;
+    protected array $filters = [];
 
     public function __construct()
     {
         $this->request = request();
     }
 
-    public function filter(Builder $builder)
+    public function filter(Builder $builder): Builder
     {
         foreach ($this->getFilters() as $filter => $value) {
             (new $this->filters[$filter]())->handle($builder, $value);
@@ -23,14 +23,15 @@ abstract class FilterableAbstract
         return $builder;
     }
 
-    protected function getFilters()
+    protected function getFilters(): array
     {
         return array_filter($this->request->only(array_keys($this->filters)));
     }
 
-    public function add(array $filters)
+    public function add(array $filters): static
     {
         $this->filters = array_merge($this->filters, $filters);
+
         return $this;
     }
 }

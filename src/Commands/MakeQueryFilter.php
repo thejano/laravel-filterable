@@ -1,50 +1,22 @@
 <?php
 
-namespace App\Console\Commands;
+namespace TheJano\LaravelFilterable\Commands;
 
-use Illuminate\Console\Command;
 use Illuminate\Console\GeneratorCommand;
 
 class MakeQueryFilter extends GeneratorCommand
 {
-    /**
-     * The name and signature of the console command.
-     *
-     * @var string
-     */
     protected $signature = 'make:query-filter {name}';
-
-    /**
-     * The console command description.
-     *
-     * @var string
-     */
-    protected $description = 'Generate A QUery filter class';
-
-    /**
-     * Generate Filterable class
-     *
-     * @var Array
-     */
+    protected $description = 'Generate A Query filter class';
     protected $type = 'Query Filter class';
 
-    protected function getStub()
+    protected function getStub(): string
     {
-        return base_path('stubs/query-filter.stub');
+        return __DIR__.'/../../stubs/query-filter.stub';
     }
 
     protected function getDefaultNamespace($rootNamespace)
     {
-        return $rootNamespace . '\Filters\QueryFilters';
-    }
-
-    /**
-     * Execute the console command.
-     *
-     * @return int
-     */
-    public function handle()
-    {
-        parent::handle();
+        return config('filterable.query_filter_namespace');
     }
 }

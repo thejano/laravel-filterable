@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Filters\Abstracts;
+namespace TheJano\LaravelFilterable\Abstracts;
 
 abstract class QueryFilterAbstract
 {
-    protected $mapValues = [];
+    protected array $mapValues = [];
 
     protected function resolveValue($value)
     {
