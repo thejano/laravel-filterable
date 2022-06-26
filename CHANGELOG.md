@@ -1,9 +1,12 @@
 # Release Notes
 
+## 1.0.3 - 2022-06-26
+
+- Fix publish config file on readme instructionss
 
 ## 1.0.2 - 2022-06-26
 
-- Update some package scopes 
+- Update some package scopes
 
 ## 1.0.1 - 2022-06-26
 
