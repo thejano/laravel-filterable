@@ -7,14 +7,14 @@ use Illuminate\Database\Eloquent\Builder;
 
 trait QueryFiltersTrait
 {
-    public static function scopeLike(Builder $builder, $feild, $value): Builder
+    public static function scopeLike(Builder $builder, $field, $value): Builder
     {
-        return $builder->where($feild, 'LIKE', '%' . $value . "%");
+        return $builder->where($field, 'LIKE', '%' . $value . "%");
     }
 
-    public static function scopeOrLike(Builder $builder, $feild, $value): Builder
+    public static function scopeOrLike(Builder $builder, $field, $value): Builder
     {
-        return $builder->orWhere($feild, 'LIKE', '%' . $value . "%");
+        return $builder->orWhere($field, 'LIKE', '%' . $value . "%");
     }
 
     public static function scopeOrderModel(Builder $builder, $field = 'created_at', $order = 'DESC'): Builder
@@ -22,9 +22,9 @@ trait QueryFiltersTrait
         return  $builder->orderBy($field, $order);
     }
 
-    public static function scopeBetweenDate(Builder $builder, $dates, $feild = 'created_at'): Builder
+    public static function scopeBetweenDate(Builder $builder, $dates, $field = 'created_at'): Builder
     {
-        return $builder->whereBetween($feild, [
+        return $builder->whereBetween($field, [
             Carbon::parse($dates[0])->startOfDay(),
             Carbon::parse($dates[1])->endOfDay(),
         ]);

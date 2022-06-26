@@ -28,7 +28,7 @@ abstract class FilterableAbstract
         return array_filter($this->request->only(array_keys($this->filters)));
     }
 
-    public function add(array $filters): static
+    public function add(array $filters): self
     {
         $this->filters = array_merge($this->filters, $filters);
 

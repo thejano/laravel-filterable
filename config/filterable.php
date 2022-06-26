@@ -11,7 +11,7 @@ return [
     |
     */
 
-    'filterable_namespace' => "App\\Filters\\Filterables",
+    'filterable_namespace' => "App\\Filters\\Filterable",
 
     /*
     |--------------------------------------------------------------------------
@@ -21,6 +21,6 @@ return [
     |
     */
 
-    'query_filter_namespace' => "App\\Filters\\QueryFilters",
+    'query_filter_namespace' => "App\\Filters\\QueryFilter",
 
 ];
