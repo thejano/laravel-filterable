@@ -379,7 +379,7 @@ The configuration file contains the available Query Filters, which are:
 ```
 Or you can pass a custom field. The delimiter is `BY`
 ```bash
-/posts?date[fromBYupdated_at]=2022-06-01&date[toInBupdated_at]=2022-07-01
+/posts?date[fromBYupdated_at]=2022-06-01&date[toBYupdated_at]=2022-07-01
 ```
 <br>
 
