@@ -1,0 +1,17 @@
+<?php
+
+namespace {{ namespace }};
+
+use App\Filters\Abstracts\FilterableAbstract;
+use App\Filters\Interfaces\FilterableInterface;
+
+class {{ class }} extends FilterableAbstract implements FilterableInterface
+{
+    /**
+     * It contains list of Query Filters
+     *
+     * @var Array
+     */
+    protected $filters = [];
+}
+
