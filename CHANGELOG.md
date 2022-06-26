@@ -1,3 +1,9 @@
-# Changelog
+# Release Notes
 
-All notable changes to `laravel-filterable` will be documented in this file.
+## 1.0.0 - 2022-06-26
+
+The initial release of the package
+
+## [v1.0.0] - 2022-06-27
+
+- Intial Release
