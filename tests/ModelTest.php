@@ -65,7 +65,6 @@ it('Pass additioonal filters as parameter', function () {
 
 
 it("Apply created_at as default to list of filters", function () {
-
     $request = new Request([
         'created_at' => [
             'from' => now()->subMonth()->toDateString(),
