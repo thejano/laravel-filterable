@@ -13,6 +13,11 @@ abstract class FilterableAbstract
     public function __construct($request = null)
     {
         $this->request = $request;
+
+        if (is_null($request)) {
+            $this->request = request();
+        }
+
         $this->seDefaultFilters();
     }
 
@@ -23,8 +28,7 @@ abstract class FilterableAbstract
 
     protected function appliedFilters(): array
     {
-        $clean_request = $this->request?->only(array_keys($this->filters));
-
+        $clean_request = $this->request->only(array_keys($this->filters));
         return ! is_null($clean_request) ? array_filter($clean_request) : [];
     }
 
