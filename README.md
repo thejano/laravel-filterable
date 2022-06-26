@@ -323,7 +323,7 @@ public function scopeFilterable(Builder $builder, $request = null, $filterableCl
 ```
 <br>
 
-If you pass Filterable class as 1st parameter, under the hood the package will handle it for you and ignore the `request`. Let's check the code below.
+If you pass Filterable class as 1st parameter, under the hood the package will handle it for you and ignore the `$request` variable and uses the `request()` helper function. Let's check the code below.
 ```php
 <?php
 
