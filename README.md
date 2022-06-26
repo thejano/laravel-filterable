@@ -114,7 +114,7 @@ composer require thejano/laravel-filterable
 You can publish the config file with:
 
 ```bash
-php artisan vendor:publish --tag="laravel-filterable-config"
+php artisan vendor:publish --tag="filterable-config"
 ```
 
 ## Usage
