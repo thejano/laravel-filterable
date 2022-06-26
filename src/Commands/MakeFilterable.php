@@ -7,7 +7,7 @@ use Illuminate\Console\GeneratorCommand;
 class MakeFilterable extends GeneratorCommand
 {
     protected $signature = 'make:filterable {name}';
-    protected $description = 'Generate A filterable class';
+    protected $description = 'Create a new filterable class';
     protected $type = 'Filterable class';
 
     protected function getStub(): string

@@ -1,6 +1,6 @@
 {
     "name": "thejano/laravel-filterable",
-    "description": "Add filtiration functionality to Larvel Models",
+    "description": "Add filtration functionality to Larvel Models",
     "keywords": [
         "TheJano",
         "laravel",
@@ -17,8 +17,9 @@
     ],
     "require": {
         "php": "^8.0|^8.1",
-        "spatie/laravel-package-tools": "^1.9.2",
-        "illuminate/contracts": "^9.0"
+        "ajthinking/archetype": "^1.1",
+        "illuminate/contracts": "^9.0",
+        "spatie/laravel-package-tools": "^1.9.2"
     },
     "require-dev": {
         "friendsofphp/php-cs-fixer": "^3.8",

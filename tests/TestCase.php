@@ -17,7 +17,7 @@ class TestCase extends Orchestra
         $this->migrate();
 
         Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'TheJano\\LaravelFilterable\\Database\\Factories\\'.class_basename($modelName).'Factory'
+            fn (string $modelName) => 'TheJano\\LaravelFilterable\\database\\Factories\\'.class_basename($modelName).'Factory'
         );
     }
 

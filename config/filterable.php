@@ -4,22 +4,25 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Namespace for Filterable Classes
+    | Assign Namespace for Filterable & Query Filter Classes
     |--------------------------------------------------------------------------
     |
     |
     */
 
     'filterable_namespace' => "App\\Filters\\Filterable",
+    'query_filter_namespace' => "App\\Filters\\QueryFilter",
 
     /*
     |--------------------------------------------------------------------------
-    | Namespace for Query Filter Classes
+    | Assign Class suffix for Filterable & Query Filter Classes
     |--------------------------------------------------------------------------
     |
     |
     */
 
-    'query_filter_namespace' => "App\\Filters\\QueryFilter",
+    'filterable_suffix' => 'Filterable',
+    'query_filter_suffix' => 'QueryFilter',
+
 
 ];
