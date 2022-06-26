@@ -24,5 +24,18 @@ return [
     'filterable_suffix' => 'Filterable',
     'query_filter_suffix' => 'QueryFilter',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Default Query Filters
+    |--------------------------------------------------------------------------
+    | They are available with every Filterable class
+    |
+    */
+
+    'deafult_query_filters' => [
+        'date' => \TheJano\LaravelFilterable\QueryFilter\DateQueryFilter::class,
+        'order' => \TheJano\LaravelFilterable\QueryFilter\OrderQueryFilter::class,
+    ],
+
 
 ];

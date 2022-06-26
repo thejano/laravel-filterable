@@ -56,23 +56,3 @@ it('Pass additioonal filters as parameter', function () {
 
     $this->assertEquals(2, $posts->count());
 });
-
-
-it("Apply created_at as default to list of filters", function () {
-    $request = new Request([
-        'created_at' => [
-            'from' => now()->subMonth()->toDateString(),
-            'to' => now()->addDays(6)->toDateString(),
-        ],
-    ]);
-
-    Post::insert([
-       ['created_at' => now()->subDays(10)],
-       ['created_at' => now()->addDays(10)],
-       ['created_at' => now()->addDays(3)],
-    ]);
-
-    $posts = Post::filterable($request);
-
-    $this->assertEquals(2, $posts->count());
-});
