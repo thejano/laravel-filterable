@@ -32,6 +32,6 @@ class DateQueryFilter extends QueryFilterAbstract implements QueryFilterInterfac
         }
 
 
-        return $builder->betweenDate([$date['from'],$date['to']], $field);
+        return $builder->janoBetweenDate([$date['from'],$date['to']], $field);
     }
 }

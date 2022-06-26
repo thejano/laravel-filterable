@@ -31,6 +31,6 @@ class OrderQueryFilter extends QueryFilterAbstract implements QueryFilterInterfa
 
         $order = $this->resolveValue($order);
 
-        return $builder->orderModel($field, $order);
+        return $builder->janoOrderModel($field, $order);
     }
 }
