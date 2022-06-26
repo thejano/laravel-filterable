@@ -9,7 +9,6 @@ use TheJano\LaravelFilterable\Traits\HasFilterableTrait;
 
 class Post extends Model
 {
-    use HasFactory;
     use HasFilterableTrait;
 
     protected $guarded = [];

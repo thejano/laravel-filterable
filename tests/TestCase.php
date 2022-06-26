@@ -15,10 +15,7 @@ class TestCase extends Orchestra
         parent::setUp();
 
         $this->migrate();
-
-        Factory::guessFactoryNamesUsing(
-            fn (string $modelName) => 'TheJano\\LaravelFilterable\\database\\Factories\\'.class_basename($modelName).'Factory'
-        );
+        
     }
 
     protected function getPackageProviders($app)

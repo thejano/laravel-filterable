@@ -5,11 +5,6 @@ use TheJano\LaravelFilterable\Tests\Filters\Filterable\PostFilterable;
 use TheJano\LaravelFilterable\Tests\Filters\QueryFilter\HasCommentsQueryFilter;
 use TheJano\LaravelFilterable\Tests\Models\Post;
 
-it('Insert Posts', function () {
-    $posts = Post::factory(100)->create();
-    $this->assertEquals(100, $posts->count());
-});
-
 
 it('Pass filterable to the model', function () {
     $request = new Request([
