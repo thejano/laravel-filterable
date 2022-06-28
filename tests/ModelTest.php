@@ -56,4 +56,3 @@ it('Pass additioonal filters as parameter', function () {
 
     $this->assertEquals(2, $posts->count());
 });
-

@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.1.0 - 2022-06-28
+
+- Adding default filterable class to the model, no need to implement `filterableClass` method to use the default query filters
+
 ## 1.0.3 - 2022-06-26
 
 - Fix publish config file on readme instructionss
