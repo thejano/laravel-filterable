@@ -30,7 +30,6 @@ trait HasFilterableTrait
         return (new $filterableClass($request))->add($filters)->filter($builder);
     }
 
-
     public function filterableClass()
     {
         return DefaultFilterable::class;
