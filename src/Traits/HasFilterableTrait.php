@@ -4,7 +4,7 @@ namespace TheJano\LaravelFilterable\Traits;
 
 use Illuminate\Contracts\Database\Query\Builder;
 use TheJano\LaravelFilterable\Interfaces\FilterableInterface;
-use TheJano\LaravelFilterable\Tests\Filterable\DefaultFilterable;
+use TheJano\LaravelFilterable\Filterable\DefaultFilterable;
 
 trait HasFilterableTrait
 {
