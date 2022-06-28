@@ -27,6 +27,12 @@ class CommandUtil
 
     public function initializeClass($name, $configKey): object
     {
+        if (is_null($name)) {
+            return (object) [
+              'name' => $name,
+            ];
+        }
+
         $namespaceKey = $configKey.'_namespace';
         $suffixKey = $this->getConfig($configKey.'_suffix');
 
@@ -41,7 +47,9 @@ class CommandUtil
 
     public static function getFilterKey($class)
     {
-        return str()->of($class->name)->replace($class->suffix, '')->camel()->value;
+        $className = str()->of($class->name)->explode('\\')->last();
+
+        return str()->of($className)->replace($class->suffix, '')->camel()->value;
     }
 
     public function getClassPath(string $className, string $configKey): string
