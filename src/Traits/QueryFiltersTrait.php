@@ -24,9 +24,19 @@ trait QueryFiltersTrait
 
     public static function scopeJanoBetweenDate(Builder $builder, $dates, $field = 'created_at'): Builder
     {
+        $firstDate = Carbon::parse($dates[0]);
+        $secondDate = Carbon::parse($dates[1]);
+
+        $isFirstDateValid = $firstDate->format('Y-m-d') == $dates[0];
+        $isSecondDateValid = $secondDate->format('Y-m-d') == $dates[1];
+
+        if (! $isFirstDateValid || ! $isSecondDateValid) {
+            return $builder;
+        }
+
         return $builder->whereBetween($field, [
-            Carbon::parse($dates[0])->startOfDay(),
-            Carbon::parse($dates[1])->endOfDay(),
+            $firstDate->startOfDay(),
+            $secondDate->endOfDay(),
         ]);
     }
 }
