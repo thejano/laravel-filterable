@@ -57,8 +57,9 @@ class CommandUtil
         $config = $this->getConfig($configKey);
 
         $folderPath = str()->of($config)->explode('\\')->forget(0)->join('/');
+        $class = str_replace('\\', '/', $className);
 
-        return app_path("{$folderPath}/{$className}.php");
+        return app_path("{$folderPath}/{$class}.php");
     }
 
     public function getClassNamespace($className, $configKey): string

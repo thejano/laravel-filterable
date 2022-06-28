@@ -26,6 +26,10 @@ class {{ class }} extends QueryFilterAbstract implements QueryFilterInterface
     **/
     public function handle(Builder $builder, $value): Builder
     {
+        if (is_null($value)) {
+            return $builder;
+        }
+
         return $builder;
     }
 }
