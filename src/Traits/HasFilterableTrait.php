@@ -3,8 +3,8 @@
 namespace TheJano\LaravelFilterable\Traits;
 
 use Illuminate\Contracts\Database\Query\Builder;
-use TheJano\LaravelFilterable\Interfaces\FilterableInterface;
 use TheJano\LaravelFilterable\Filterable\DefaultFilterable;
+use TheJano\LaravelFilterable\Interfaces\FilterableInterface;
 
 trait HasFilterableTrait
 {
