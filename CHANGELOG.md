@@ -1,5 +1,10 @@
 # Release Notes
 
+## 1.1.2 - 2022-06-28
+
+- Fix auto-inset filter for sub folders
+- Fix return null when filterable not passed to make:query-filter
+
 ## 1.1.1 - 2022-06-28
 
 - Fixing name space of default filterable
