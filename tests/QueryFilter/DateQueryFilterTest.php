@@ -32,9 +32,9 @@ it("Assert the the entries between 2 dates passing a custom field", function () 
     ]);
 
     Post::insert([
-        ['updated_at' => now()->subDays(30)],
+        ['updated_at' => now()->subDays(25)],
         ['updated_at' => now()->addDays(2)],
-        ['updated_at' => now()->addDays(6)],
+        ['updated_at' => now()->addDays(5)],
     ]);
 
     $posts = Post::filterable($request);

@@ -287,8 +287,10 @@ class PostsFilterable extends FilterableAbstract implements FilterableInterface
 
 The final step is enabling `PostsFilterable` to your model. 
 
-There are 2 ways to enable it:
-1. Globally for the model, through returning the class path to `filterableClass()` method.
+There are 3 ways to enable it:
+1. You should do nothing :) It would enable all default Query Filters to your model.
+
+3. Pass it to the model, through returning the class path to `filterableClass()` method.
 ```php
 <?php
 
@@ -305,7 +307,7 @@ class Post extends Model
     use HasFilterableTrait;
 
     /**
-     * Enable the filterable class to the model globally
+     * Enable the filterable class to the model
      *
      * @return void
      */
@@ -317,7 +319,7 @@ class Post extends Model
 ```
 <br>
 
-2. Locally, through passing as a parameter to `fliterable()` scope of your model. The scope accepts 3 parameters
+3. Locally, through passing as a parameter to `fliterable()` scope of your model. The scope accepts 3 parameters
 ```php
 public function scopeFilterable(Builder $builder, $request = null, $filterableClass = null, $filters = []): Builder
 ```

@@ -4,6 +4,7 @@ namespace TheJano\LaravelFilterable\Traits;
 
 use Illuminate\Contracts\Database\Query\Builder;
 use TheJano\LaravelFilterable\Interfaces\FilterableInterface;
+use TheJano\LaravelFilterable\Tests\Filterable\DefaultFilterable;
 
 trait HasFilterableTrait
 {
@@ -25,12 +26,14 @@ trait HasFilterableTrait
             $filterableClass = $this->modelFilterableClass();
         }
 
+
         return (new $filterableClass($request))->add($filters)->filter($builder);
     }
 
+
     public function filterableClass()
     {
-        return null;
+        return DefaultFilterable::class;
     }
 
     protected function modelFilterableClass()

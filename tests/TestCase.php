@@ -5,6 +5,7 @@ namespace TheJano\LaravelFilterable\Tests;
 use Orchestra\Testbench\TestCase as Orchestra;
 
 use TheJano\LaravelFilterable\LaravelFilterableServiceProvider;
+use TheJano\LaravelFilterable\Tests\Migrations\CatgeoryMigration;
 use TheJano\LaravelFilterable\Tests\Migrations\PostsMigration;
 
 class TestCase extends Orchestra
@@ -37,6 +38,7 @@ class TestCase extends Orchestra
     {
         $migrations = [
             PostsMigration::class,
+            CatgeoryMigration::class,
         ];
 
         foreach ($migrations as $migration) {
