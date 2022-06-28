@@ -24,6 +24,7 @@ class DateQueryFilter extends QueryFilterAbstract implements QueryFilterInterfac
             $field = str($key)->explode($delimiter)->last();
             $date = collect($date)->mapWithKeys(function ($item, $key) use ($delimiter) {
                 $key = str($key)->explode($delimiter)->first();
+
                 return [
                   $key => $item,
                 ];
