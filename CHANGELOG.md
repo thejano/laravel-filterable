@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.1.1 - 2022-06-28
+
+- Fixing name space of default filterable
+
 ## 1.1.0 - 2022-06-28
 
 - Adding default filterable class to the model, no need to implement `filterableClass` method to use the default query filters
