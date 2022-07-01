@@ -1,5 +1,10 @@
 # Release Notes
 
+## 1.1.3 - 2022-07-01
+
+- Fix filterable class path when used to auto-insert creating query filters
+- Add checking for null values
+
 ## 1.1.2 - 2022-06-28
 
 - Fix auto-inset filter for sub folders
