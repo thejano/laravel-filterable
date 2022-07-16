@@ -30,7 +30,9 @@ abstract class FilterableAbstract
     {
         $clean_request = $this->request->only(array_keys($this->filters));
 
-        return ! is_null($clean_request) ? array_filter($clean_request) : [];
+        return ! is_null($clean_request) ?
+                array_filter($clean_request, fn ($filter) => !is_null($filter))
+                : [];
     }
 
     public function filter(Builder $builder): Builder
