@@ -12,20 +12,18 @@ trait HasFilterableTrait
 
     public function scopeFilterable(Builder $builder, $request = null, $filterableClass = null, $filters = []): Builder
     {
-        if (is_array($filterableClass)) {
+        if (\is_array($filterableClass)) {
             $filters = $filterableClass;
         }
 
-
-        if (! is_null($request) && ((new $request()) instanceof FilterableInterface)) {
+        if (null !== $request && ! \is_array($request) && ((new $request()) instanceof FilterableInterface)) {
             $filterableClass = $request;
             $request = request();
         }
 
-        if ($filterableClass == null && $this->modelFilterableClass() != null) {
+        if (null === $filterableClass && null !== $this->modelFilterableClass()) {
             $filterableClass = $this->modelFilterableClass();
         }
-
 
         return (new $filterableClass($request))->add($filters)->filter($builder);
     }

@@ -3,18 +3,20 @@
 namespace TheJano\LaravelFilterable\Abstracts;
 
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Http\Request;
 use TheJano\LaravelFilterable\QueryFilter\DefaultFilters;
 
 abstract class FilterableAbstract
 {
     private mixed $request;
+
     protected array $filters = [];
 
     public function __construct($request = null)
     {
         $this->request = $request;
 
-        if (is_null($request)) {
+        if (null === $request) {
             $this->request = request();
         }
 
@@ -28,11 +30,18 @@ abstract class FilterableAbstract
 
     protected function appliedFilters(): array
     {
-        $clean_request = $this->request->only(array_keys($this->filters));
-
-        return ! is_null($clean_request) ?
-                array_filter($clean_request, fn ($filter) => ! is_null($filter))
+        return null !== $this->cleanRequest() ?
+                array_filter($this->cleanRequest(), static fn ($filter) => null !== $filter)
                 : [];
+    }
+
+    public function cleanRequest(): array
+    {
+        if ($this->request instanceof Request) {
+            return $this->request->only(array_keys($this->filters));
+        }
+
+        return collect($this->request)->only(array_keys($this->filters))->toArray();
     }
 
     public function filter(Builder $builder): Builder
