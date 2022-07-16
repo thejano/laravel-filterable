@@ -369,6 +369,8 @@ class PostController extends Controller
 
 ```
 
+Instead only `Request` you can pass array of parameters to filter too.
+
 ## Default Query Filters 
 Last but not least, by default the package deliveries some Query Filters with every Filterable class.
 The configuration file contains the available Query Filters, which are:
