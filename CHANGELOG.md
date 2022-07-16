@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.1.4 - 2022-07-16
+
+- Filter only null query filters
+
 ## 1.1.3 - 2022-07-01
 
 - Fix filterable class path when used to auto-insert creating query filters
