@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.2.1 - 2022-07-16
+
+- Allow filterable scope to accept array parameter instead of request only
+
 ## 1.1.4 - 2022-07-16
 
 - Filter only null query filters
