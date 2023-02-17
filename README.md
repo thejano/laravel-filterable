@@ -2,8 +2,8 @@
 # Laravel Filterable
  
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/thejano/laravel-filterable.svg?style=flat-square)](https://packagist.org/packages/thejano/laravel-filterable)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/thejano/laravel-filterable/run-tests?label=tests)](https://github.com/thejano/laravel-filterable/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/thejano/laravel-filterable/Check%20&%20fix%20styling?label=code%20style)](https://github.com/thejano/laravel-filterable/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
+[![GitHub Tests Action Status](https://github.com/thejano/laravel-filterable/actions/workflows/run-tests.yml/badge.svg)](https://github.com/thejano/laravel-filterable/actions/workflows/run-tests.yml)
+[![GitHub Code Style Action Status](https://github.com/thejano/laravel-filterable/actions/workflows/php-cs-fixer.yml/badge.svg)](https://github.com/thejano/laravel-filterable/actions/workflows/php-cs-fixer.yml)
 [![Total Downloads](https://img.shields.io/packagist/dt/thejano/laravel-filterable.svg?style=flat-square)](https://packagist.org/packages/thejano/laravel-filterable)
 
 This package adds filtration functionality to Laravel Models. It would be based on Filterable and Query Filter classes. 
@@ -99,7 +99,7 @@ class PostController extends Controller
 
 The package requires:
 - PHP 8.1 or higher
-- Laravel 9.x or higher
+- Laravel 9.3 or higher
 
 
 ## Installation
