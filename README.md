@@ -1,13 +1,13 @@
 
 # Laravel Filterable
-
+ 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/thejano/laravel-filterable.svg?style=flat-square)](https://packagist.org/packages/thejano/laravel-filterable)
 [![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/thejano/laravel-filterable/run-tests?label=tests)](https://github.com/thejano/laravel-filterable/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/workflow/status/thejano/laravel-filterable/Check%20&%20fix%20styling?label=code%20style)](https://github.com/thejano/laravel-filterable/actions?query=workflow%3A"Check+%26+fix+styling"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/thejano/laravel-filterable.svg?style=flat-square)](https://packagist.org/packages/thejano/laravel-filterable)
 
 This package adds filtration functionality to Laravel Models. It would be based on Filterable and Query Filter classes. 
-The package will provide commands to generate Filterable and Query Filter classes. By default, it will add some default filtration out of the box to you models like ordering, get data between tow dates and more. 
+The package will provide commands to generate Filterable and Query Filter classes. By default, it will add some default filtration out of the box to you models like ordering, get data between two dates and more. 
 
 Imagine you have a url containing the following parameters:
 
