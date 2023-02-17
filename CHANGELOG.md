@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.2.2 - 2023-02-17
+
+- Update to support Laravel 10
+
 ## 1.2.1 - 2022-07-16
 
 - Allow filterable scope to accept array parameter instead of request only
