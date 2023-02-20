@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.3.1 - 2023-02-20
+
+Support PHP 8.0
+
 ## 1.2.2 - 2023-02-17
 
 - Update to support Laravel 10
