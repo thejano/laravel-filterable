@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.3.2 - 2023-02-21
+
+- Add namespace option to commands
+
 ## 1.3.1 - 2023-02-20
 
 Support PHP 8.0
