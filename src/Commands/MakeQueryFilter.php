@@ -7,17 +7,23 @@ use TheJano\LaravelFilterable\Utils\CommandUtil;
 
 class MakeQueryFilter extends GeneratorCommand
 {
-    protected $signature = 'make:query-filter {name} {--filterable=}';
+    protected $signature = 'make:query-filter {name} {--filterable=}  {--ns|namespace=}';
+
     protected $description = 'Create a new Query filter class';
+
     protected $type = 'Query Filter class';
 
     protected function getStub(): string
     {
-        return __DIR__.'/../../stubs/query-filter.stub';
+        return __DIR__ . '/../../stubs/query-filter.stub';
     }
 
     protected function getDefaultNamespace($rootNamespace)
     {
+        if (null !== $this->option('namespace')) {
+            return $this->option('namespace');
+        }
+
         return config('filterable.query_filter_namespace');
     }
 
@@ -30,7 +36,7 @@ class MakeQueryFilter extends GeneratorCommand
 
         parent::handle();
 
-        if (is_null($filterable->name)) {
+        if (null === $filterable->name) {
             return false;
         }
 
