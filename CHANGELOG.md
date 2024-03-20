@@ -1,5 +1,9 @@
 # Release Notes
 
+## Update to support Laravel 11 - 2024-03-20
+
+- Update to support Laravel 11
+
 ## 1.3.2 - 2023-02-21
 
 - Add namespace option to commands
