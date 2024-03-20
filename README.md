@@ -98,8 +98,8 @@ class PostController extends Controller
 ## Requirement
 
 The package requires:
-- PHP 8.0 or higher
-- Laravel 9.x or higher
+- PHP 8.1 or higher
+- Laravel 10.x or higher
 
 
 ## Installation
