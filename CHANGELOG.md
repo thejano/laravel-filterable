@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.5.0 - 2024-03-20
+
+- Update to support Laravel 12
+
 ## 1.4.0 - 2024-03-20
 
 - Update to support Laravel 11

@@ -3,7 +3,6 @@
 namespace TheJano\LaravelFilterable\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
-
 use TheJano\LaravelFilterable\LaravelFilterableServiceProvider;
 use TheJano\LaravelFilterable\Tests\Migrations\CatgeoryMigration;
 use TheJano\LaravelFilterable\Tests\Migrations\PostsMigration;
