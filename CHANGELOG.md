@@ -1,5 +1,9 @@
 # Release Notes
 
+## 1.6.0 - 2026-06-30
+
+- Update to support Laravel 13
+
 ## 1.5.0 - 2024-03-20
 
 - Update to support Laravel 12
